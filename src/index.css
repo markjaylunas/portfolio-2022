@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    #root {
+        @apply 
+            
+            2xs:bg-slate-800
+            xs:bg-rose-500
+            sm:bg-orange-500
+            md:bg-yellow-500
+            lg:bg-green-500
+            xl:bg-white
+              
+              2xs:before:content-['2xs'] 
+              xs:before:content-['xs'] 
+              sm:before:content-['mobile'] 
+              md:before:content-['tablet'] 
+              lg:before:content-['laptop']
+              xl:before:content-['desktop']
+    }
+
+
+    .nav-link {
+        @apply ease-in-out hover:text-main-dark hover:underline hover:decoration-2 decoration-main-dark underline-offset-4  
+    }
+}
